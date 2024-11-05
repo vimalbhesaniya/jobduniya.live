@@ -1,0 +1,86 @@
+.container {
+    width: 30%;
+    height: 400px;
+    overflow: scroll;
+    background-color: white;
+    border-radius: 3px;
+}
+
+@media (max-width : 992px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media (max-width : 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+.header {
+    width: 100%;
+    /* text-align: center; */
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.searchBox {
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.formControl {
+    outline: none;
+    border: 0.3px solid rgba(0, 0, 0, 0.07);
+    padding-left: 20px;
+    padding: 10px;
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    box-shadow: 0 0 10px rgba(159, 159, 159, 0.426);
+}
+
+.profile {
+    flex-grow: 1;
+    flex-basis: 100px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    align-items: center;    
+    /* overflow: hidden; */
+}
+
+.discription {
+    flex-grow: 1;
+    flex-basis: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.imgDiv{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.img {
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* overflow: hidden; */
+}

@@ -1,0 +1,160 @@
+.--main {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    justify-content: center;
+    max-height: calc(100vh );
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.--left {
+    max-width: 550px;
+    width: 100vh;
+    height: 550px;
+}
+
+.--right {
+    max-width: 550px;
+    width: 100vh;
+    height: 600px;
+    padding: 50px;
+
+}
+
+.--heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.--headingText {
+    font-size: 2rem;
+    color: black;
+}
+
+.--sloganText {
+    font-size: 1rem;
+
+
+}
+
+.Forms {
+    width: 100%;
+    max-height: 300px;
+    display: flex;
+    overflow: auto;
+    justify-content: left;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.--input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.48);
+}
+
+.--input:focus {
+    border: 2px solid rgb(0, 0, 255);
+}
+
+::placeholder {
+    font-size: 1.2rem;
+}
+
+.--btn {
+    width: 100%;
+    padding: 13px;
+    white-space: nowrap;
+    border-radius: 10px;
+    border: 1px solid rgb(90, 167, 255);
+    background-color: #23A6F0;
+    font-size: 1.2rem;
+}
+
+.--btnDisabled {
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    border: 1px solid rgba(186, 186, 186, 0.531);
+    background-color: rgba(0, 98, 255, 0.144);
+    font-size: 1.2rem;
+}
+
+.form--footer {
+    width: 100%;
+}
+
+.--navLink {
+    margin: 0;
+}
+
+.--form {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.--formData{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+
+.skillsss{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(190, 190, 190, 0.388);
+    flex-grow: auto;
+    text-align: justify;
+    flex-basis: auto;
+}
+
+.targetToClose{
+    cursor: pointer;
+}
+
+.targetToClose:hover    {
+    color: #23A6F0;
+}
+.--allinput {
+    width: 100%;
+}
+
+@media only screen and (max-width : 768px) {
+    .--main {
+        padding: 20px;
+    }
+
+    .--sloganText {
+        font-size: small;
+    }
+
+    .--right {
+        padding: 30px;
+
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .--left {
+        display: none;
+    }
+}
+
+.--titleText {
+    font-size: 0.8em;
+    text-align: justify;
+    color: #2C73D2;
+    width: 100%;
+}

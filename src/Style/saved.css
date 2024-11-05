@@ -1,0 +1,119 @@
+.first-line
+{
+    width: 100%;
+}
+.first-line p {
+    font-size: 18px;
+    color: grey;
+    font-weight: 600;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.first-line p i {
+    margin-right: 8px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.wid{
+    width: 100%;
+}
+
+.second-line {
+    border-left: 4px inset var(--primary-color);
+}
+.second-line p {
+    display: inline-block;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.second-line p:hover {
+    color: #0b56c6;
+}
+
+.box1 {
+    padding: 20px 20px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.box1 p {
+    margin: 0;
+    font-size: 30px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.a-box {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.a-box a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 14px;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+/* 
+.a-box a:nth-child(1) {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+} */
+
+.a-box a:hover {
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+}
+
+.box2 {
+    padding: 20px 0px 20px;
+    text-align: center;
+}
+
+.box2 h3 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.box2 p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.box2 a {
+    display: inline-block;
+    background-color: white;
+    color: #0b56c6;
+    border: 1px solid #0b56c6;
+    padding: 6px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 10px 0px 0px;
+}
+
+.box2 a:hover {
+    background-color: #0b56c6;
+    color: white;
+}
+
+.wid2 {
+    width: 100%;
+    margin: auto;
+}

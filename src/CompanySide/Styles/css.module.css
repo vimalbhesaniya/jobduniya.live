@@ -1,0 +1,66 @@
+@media (min-width: 200px) and (max-width: 767px) {
+    .modal-dialog {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .modal-content {
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 400px) {
+    .res-img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .res-img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btnBox button {
+    padding: 3px 10px;
+    /* background-color: white; */
+    border-radius: 50px;
+}
+
+.fBtn {
+    background-color: #0a66c2;
+    color: white;
+    border: 2px solid #0a66c2;
+}
+
+.msgBtn {
+    border: 2px solid #0a66c2;
+    color: #0a66c2;
+    background-color: white;
+}
+
+.mBtn {
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+}
+
+@media (min-width: 768px) {
+    .rgt {
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .rgt {
+        text-align: right;
+    }
+}

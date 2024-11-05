@@ -1,0 +1,54 @@
+.editMain {
+    width: 100%;
+    max-width: 50rem;
+    height: 500px;
+    background-color: red;
+    position: fixed;
+    z-index: 100000;
+    top: 100px;
+
+}
+
+.inputText {
+    min-height: auto;
+    padding: 4.5px 12px 3.68px 12px;
+    transition: all .1s linear;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    appearance: none;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid rgb(30, 191, 255);
+    border-radius: 3px;
+    transition: all .2s linear;
+}
+
+::placeholder{
+    color: gray;
+}
+
+.cardContainer {
+    width: 60%;
+
+}
+
+@media (max-width : 992px) {
+    .cardContainer {
+        width: 75%;
+        height: 70%;
+        overflow: scroll;
+    }
+}
+
+@media (max-width:768px) {
+    .cardContainer {
+        width: 85%;
+        height: 70vh !important;
+    }
+}

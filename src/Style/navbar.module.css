@@ -1,0 +1,354 @@
+:root {
+    --bg: #000000;
+    --font: #000000;
+    --primary-color: #23A6F0;
+    --pbg: #edf1f5;
+    --pfont: #000000;
+    --text-color: #000000;
+    --second-text-color: #737373;
+    --second-border-color: #000000;
+    --light-gray-1: #000000;
+    --primary-color: #000000;
+    --success-text-color: #ffffff;
+    --muted-color: #000000;
+    --secondary-color-1: #000000;
+    --dark-background-color: #252B42
+}
+
+:root{
+    background-color: white !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.navbar {
+    width: auto;
+    height: auto;
+    position: fixed;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    backdrop-filter: blur(20px);
+    z-index: 10000000;
+    font-size: 14px;
+    padding: 0 10px;
+    align-items: center;
+    background-color: white;
+    border-bottom: 0.2px solid rgba(135, 121, 121, 0.405);
+}
+
+.navbarContainer {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    position: static;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.navbarLeft {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.Logo{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbarRight{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbarRightChild{
+    min-height: 0px;
+    min-height: 0px;
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+    align-items: center;
+}
+
+.menus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.logo-name {
+    color: white;
+    font-size: 5vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.navLink {
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    font-size: 1.2em;
+    overflow: visible;
+    width: fit-content;
+    padding: 10px;
+    color: rgb(52, 52, 52);
+    text-align: left;
+    font-weight: 100;
+    transition: color  0.2s;
+}
+
+.navLinkBtn {
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    font-size: 1.2em;
+    overflow: visible;
+    width: fit-content;
+    padding: 10px;
+    color: rgb(52, 52, 52);
+    outline: none;
+    border: none;
+    background: none;
+    text-align: left;
+    font-weight: 100;
+    transition: color  0.2s;
+}
+
+.navSaperator{
+    width: 2px;
+    height: 20px;
+    background-color: gray;
+}
+
+.navLinkBox{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    overflow: hidden;
+    transition: all 200ms;
+}
+.navLinkBoxBar{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    overflow: hidden;
+    transition: all 200ms;
+}
+
+.navLinkBox:hover{
+    border-bottom: solid  black;
+}
+
+.navLinkActive{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    overflow: hidden;
+    transition: all 200ms;
+    border-bottom: 3px solid  black;
+}
+.navabarButton{
+    padding: 10px 20px;
+    width: auto;
+    height: auto;
+    min-width: 0px;
+    min-height: 0px;
+    border-radius: 5px;
+    border: none;
+    border: 0.2px solid black;
+    transition: all 0.2s ;
+}
+
+.navabarButton:hover{
+    background-color: var(--bg);
+    color: white;
+}
+.Link--res {
+    white-space: nowrap;
+    letter-spacing: -0.02em;
+    object-fit: fill;
+    overflow: visible;
+    padding: 10px 16px 10px 16px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    height: auto;
+    font-weight: 500;
+    line-height: 24px;
+    transition: color  0.2s;
+    width: auto;
+    position: relative;
+    min-width: 0px;
+    min-height: 0px;
+}
+
+.Link--res:hover{
+    color: var(--bg);
+}
+
+.logoimg {
+    mix-blend-mode: darken;
+}
+
+.responsivemenu {
+    width: 100%;
+    height: fit-content;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+
+.navbarLogo{
+    width: 400px;
+    margin-right: 10px;
+    /* max-width: 25vw; */
+}
+
+.resMenu{
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    font-size: 1.2em;
+    overflow: visible;
+    width: fit-content;
+    padding: 10px;
+    color: rgb(52, 52, 52);
+    text-align: left;
+    font-weight: 100;
+    transition: color  0.2s;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbarLogo{
+        width: 170px;
+    }
+
+    .Link-- {
+        display: none;
+    }
+
+    .navbar-- {
+        justify-content: center;
+    }
+
+    .navbarMenu{
+        display: none;
+    }
+    
+}
+
+.navMenuBar{
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    font-size: 1.2em;
+    overflow: visible;
+    width: fit-content;
+    padding: 10px;
+    color: rgb(52, 52, 52);
+    text-align: left;
+    font-weight: 100;
+    transition: color  0.2s;
+}
+
+.navMenuBarRes{
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    font-size: 1.2em;
+    overflow: visible;
+    width: fit-content;
+    padding: 10px;
+    color: rgb(52, 52, 52);
+    text-align: left;
+    font-weight: 100;
+    transition: color  0.2s;
+    /* display: none; */
+}
+.toggleMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* right: 0; */
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    height: 100px;
+    background-color: #ffffff;
+    backdrop-filter: blur(20px);
+    display: none;
+}
+
+.navLinkActiveToggle{
+    width: fit-content;
+    height: 60px;
+    overflow: hidden;
+    border-width: 1px;
+    transition: all 200ms;
+    border-bottom: solid 2px  #000000;
+}
+
+.navLinkBoxToggle{
+    width: fit-content;
+    height: 60px;
+    overflow: hidden;
+    border-width: 1px;
+    transition: all 200ms;
+}
+
+
+
+.navbarRightRes{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    display: none;
+}
+@media (max-width:1024px) {
+    .navbarLogo{
+        width: 70%;
+    }
+.navbarLeft{
+    display: none;
+}
+.navbarRightRes{
+    display: block;
+}
+.navbarRight{
+    display: none;
+}
+.navbarRightChild{
+    justify-content: flex-end;
+}
+.toggleMenu{
+    display: block;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 1000;   
+    
+}
+}
+

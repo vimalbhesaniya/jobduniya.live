@@ -1,0 +1,51 @@
+.modalBody{
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    
+}
+.modalBody::-webkit-scrollbar{
+    display: none;
+}
+
+.modalBodyTable{
+    width: 100%;
+    position: relative;
+    top: 100px;
+    max-height: 100vh;
+    margin: 0 auto;
+    overflow: auto;
+    background-color: whitesmoke;
+}
+
+.TableContainer{
+    width: 100%;
+    overflow:auto;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.modalBodyForm{
+    width: 50%;
+    max-height: 500px;
+    overflow: auto;
+    background-color: whitesmoke;
+}
+.imgFluidd{
+    width: 30%;
+}
+@media (max-width : 800px) {
+    .imgFluidd{
+        width: 70%;
+    }
+    .TableContainer{
+        width: 95%;
+    }
+    .modalBody{
+        background-color: white;
+        width: 95%;
+    }
+    .modalBodyTable{
+        background-color: white;
+        width: 95%;
+    }
+}

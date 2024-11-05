@@ -1,0 +1,237 @@
+:root{
+    --text-color: #23A6F0;
+    --second-text-color: #737373;
+    --second-border-color: #adadad;
+    --light-gray-1: #FAFAFA;
+    --primary-color: #23A6F0;
+    --success-text-color: #2DC071;
+    --muted-color: #BDBDBD;
+    --secondary-color-1: #23856D;
+    --dark-background-color: #252B42
+}
+
+.heading{
+    width: 100%;
+    max-width: 507px;
+    margin: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.mainHeading{
+    color: var(--text-color);
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0.2px;
+}
+
+.subHeading1{
+    color: var(--second-text-color);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+}
+
+.subHeading2{
+    color: var(--second-text-color);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.2px;
+}
+
+.inputText{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.inputLabel{
+    color: var(--text-color);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.inputdiv{
+    position: relative;
+    width: 100%;
+}
+
+.input{
+    width: 100%;
+    display: flex;
+    padding: 8px     16px;
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 28px;
+    border: 1px solid var(--second-border-color);
+    border-radius: 8px;
+    align-items: flex-start;
+    gap: 16px;
+    flex-basis: 50%;
+    flex-grow: 1;
+    align-self: stretch;
+    letter-spacing: 0.5px;
+}
+
+.select{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:100%;
+    height: 46px;
+    max-width: 230px;
+}
+
+.input:focus,
+.input:hover{
+    outline-color: var(--primary-color);
+    border: 1.25px solid var(--second-border-color);
+}
+
+.inputerror:focus{
+    outline-color: red;
+    border: 1.25px solid red;
+}
+
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.eyediv{
+    position: absolute;
+    right: 5%;
+    top: 31%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.warning{
+    color: red;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.primaryButton{
+    width: 100%;
+    display: flex;
+    min-height: 48px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    white-space: nowrap;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    text-transform: capitalize;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.loading{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.otheroption{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    gap: 5px
+}
+
+.link{
+    text-decoration: underline;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.notfound{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.notfounddiv{
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 700px;
+    gap: 12px;
+    margin: 75px 20px;
+}
+
+
+@media screen and (max-width: 680px) {
+    .heading{
+        gap: 8px;
+        margin: 30px 30px;
+    }
+    .mainHeading{
+        font-size: 32px;
+    }
+    .eyediv{
+        right: 4%;
+        top: 32%;
+    }
+    .notfound{
+        align-items: flex-start;
+    }
+}
+
+::placeholder{
+    font-size: 13px;
+    color: rgb(0, 38, 127);
+}
+

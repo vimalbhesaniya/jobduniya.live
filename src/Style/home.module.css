@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Italiana&display=swap');
+* {
+    scroll-behavior: smooth;
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.section1 {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Image {
+    width: 90%;
+    height: 800px;
+    object-fit: cover;
+}
+
+@media (max-width:1024px) {
+    .Image {
+        display: none;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.contentRight {
+    max-width: 50em;
+    display: flex;
+    justify-content: center;
+    min-height: 350px;
+    /* background-color: aquamarine; */
+    padding: 20px;
+}
+
+.contentLeft {
+    max-width: 30rem;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.badge {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: rgba(162, 166, 229, 0.276);
+}
+
+.badgeChild1 {
+    background-color: whitesmoke;
+    padding: 4px;
+    font-size: small;
+    height: fit-content;
+    color: rgb(17, 86, 233);
+    font-weight: 600;
+}
+
+.rightImage {
+    width: 500px;
+}
+
+@media only screen and (max-width : 768px) {
+    .rightImage {
+        width: 300px;
+    }
+}
+
+.cardsSection {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.cardMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 0 50px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cards {
+    padding: 40px;
+    width: 350px;
+    height: 400px;
+    background: rgb(233, 233, 233);
+    border-radius: 10px;
+    margin-bottom: 125px;
+    transition: all 500ms;
+}
+
+.cardHeader {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.img {
+    width: 100%;
+}
+
+@media (max-width:679px) {
+    .img {
+        display: none;
+    }
+}
+
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.cardPara {
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.cardPara:hover {
+    -webkit-line-clamp: 4;
+}
+
+.cardFooter {
+    width: 100%;
+    height: 250px;
+    background: rgba(152, 146, 146, 0.191);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: all 500ms;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    white-space: nowrap;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+
+}
+
+.button:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+
+.hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hoverEffect div {
+    background: rgb(222, 0, 75);
+    background: linear-gradient(90deg, rgba(222, 0, 75, 1) 0%, rgba(191, 70, 255, 1) 49%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+}
+
+@keyframes effect {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.section2 {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* width: 100%; */
+    padding: 50px;
+}
+
+.header2 {
+    width: 90%;
+    min-height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contentLeft2 {
+    max-width: 50rem;
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.contentRight2 {
+    width: fit-content;
+    height: 100%;
+    z-index: -1;
+}
+
+/* 
+@media (max-width:768px)
+ {
+    .contentRight2{
+        justify-content: left;
+        align-items:flex-end;
+        height: 10  0px;
+
+    }
+} */
+
+.feedbackMain {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.feedbackMsgBox {
+    width: 100%;
+    border: 0.5px solid rgb(159, 159, 159);
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.feedbackMsgBox:focus {
+    outline-style: groove;
+    outline-offset: 3px;
+    outline-width: 4px;
+    outline-color: rgba(119, 119, 119, 0.481);
+    border: none;
+}
+
+.feedbackMsgBox::placeholder {
+    font-size: 20px;
+    color: gray;
+
+}
+
+.emailTextBox::placeholder {
+    font-size: 20px;
+    color: gray;
+}
+
+.emailTextBox {
+    width: 100%;
+    border: 0.5px solid rgb(159, 159, 159);
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 3vh;
+}
+
+.lightText {
+    font-size: 1.2em;
+    color: #bcb9b9;
+}
+
+.feedBackFrom {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    width: 100%;
+    padding: 3vh;
+    flex-direction: column;
+}
+
+.h2 {
+    text-align: justify;
+    white-space: nowrap;
+    font-size: 2em;
+    margin-left: 17px;
+}
+
+.submitButton {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #e0e7f5;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 45px;
+    transition: .3s;
+}
+
+.submitButton:hover {
+    background-color: #3b5df6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+.feedbackRight {
+    width: 100%;
+    height: auto;
+    background: rebeccapurple;
+}
+
+.imgfeedback {
+    width: 100%;
+
+}
+
+@media (max-width : 768px) {
+    .section3 {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .feedbackMain {
+        padding: 10px;
+    }
+
+    .feedBackFrom {
+        padding: 10px;
+    }
+}
+
+.jobsCardsSection {
+    width: 100%;
+    min-height: auto;
+    background: springgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    min-height: 200px;
+    gap: 20px;
+}
+
+.locbox {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    -webkit-line-clamp: 1;
+    /* -webkit-box-orient: vertical; */
+    -webkit-box-orient: horizontal;
+    
+    display: -webkit-box;
+    
+}

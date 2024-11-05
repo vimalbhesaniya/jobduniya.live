@@ -1,0 +1,22 @@
+.singup--main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; 
+}
+.signUpFooter{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+.--flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

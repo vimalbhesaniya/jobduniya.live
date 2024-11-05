@@ -1,0 +1,108 @@
+:root{
+    --primary-color: #23A6F0;
+
+}
+.sensetiveDataContainer {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    gap: 10px;
+    /* background-color: rgba(255, 255, 255, 0.367); */
+}
+
+.dataContainer {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-basis: auto;
+    border-radius: 10px;
+}
+
+.data-item {
+    flex: 1 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    white-space: wrap;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@media (max-width : 666px) {
+        .data-item{
+            flex:   0 auto;
+        }
+}
+
+.data-title{
+    font-weight: 600;
+    color:var(--primary-color);
+}
+
+.multi{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.datainfoNavigator{
+    font-size: medium;
+    color: #23a5f0c5;
+    cursor: pointer;
+}
+
+.setActive{
+    color: #23A6F0;
+    font-weight: 700;
+}
+
+.datainfoNavigator:hover{
+    color: #23A6F0;
+    font-weight: 700;
+}
+
+
+.oreders {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 15px;
+	background: #fff;
+}
+
+.update {
+	display: flex;
+	gap: 10px;
+	justify-content: space-evenly;
+	padding: 15px;
+}
+
+.update > img {
+	width: 60px;
+	height: 60px;
+}
+
+.notificationUser > span:nth-child(1) {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.notificationUser > span:nth-child(2) {
+	font-size: 13px;
+}
+
+.notificationUser > div {
+	margin-top: 8px;
+	font-size: 14px;
+	color: green;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+	.oreders {
+		width: 100%;
+	}
+}
