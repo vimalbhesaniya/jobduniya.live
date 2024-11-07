@@ -9,7 +9,7 @@ const useAPI = () => {
     const [loading, setLoading] = useState(false);
 
     const postREQUEST = useCallback(async (PATH, BODY, HEADER) => {
-            setSpinnerState(true);
+            setSpinnerState(true); 
         try { 
             const RESPONSE = await fetch(`${process.env.REACT_APP_LOCAL_URL}${PATH}`,
                 {
