@@ -7,7 +7,7 @@ const SavedJobsPage = () => {
     useEffect(() => {
         async function fetchSavedJobs() {
             try {
-                const response = await fetch('http://localhost:5500/ListJob/true', {
+                const response = await fetch(`${process.env.REACT_APP_LOCAL_URL}ListJob/true`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

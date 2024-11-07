@@ -9,6 +9,7 @@ const useAPI = () => {
     const [loading, setLoading] = useState(false);
 
     const postREQUEST = useCallback(async (PATH, BODY, HEADER) => {
+        console.log('call--BODY', BODY);
             setSpinnerState(true); 
         try { 
             const RESPONSE = await fetch(`${process.env.REACT_APP_LOCAL_URL}${PATH}`,
@@ -19,17 +20,16 @@ const useAPI = () => {
                         'Authorization': `Bearer jobduniya`, 
                         ...HEADER
                     },
-                    body: BODY,
+                    body: JSON.stringify(BODY),
                     method: "POST",
-                    mode:'no-cors'
+                    // mode:'no-cors'
                 })
-                console.log('call--', RESPONSE);
             const data = await RESPONSE.json();
             if (data) {
                 setSpinnerState(false);
+                setData(data);
+                return data
             }
-            setData(data);
-            return data
         }
         catch (error) {
             setError(error);

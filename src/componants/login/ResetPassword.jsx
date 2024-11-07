@@ -19,7 +19,7 @@ import css from "../../Style/inputBoxs.module.css"
       e.preventDefault();
       setMessage('');
       if (email.length >= 2) {    
-          const response = await fetch("http://localhost:5500/forgot", {
+          const response = await fetch(`${process.env.REACT_APP_LOCAL_URL}forgot`, {
               body: JSON.stringify({ email }),
               method: "POST",
               headers: {
@@ -44,7 +44,7 @@ import css from "../../Style/inputBoxs.module.css"
       e.preventDefault();
       if (otp.length === 6) {
         
-          const response = await fetch("http://localhost:5500/checkOTP", {
+          const response = await fetch(`${process.env.REACT_APP_LOCAL_URL}/checkOTP`, {
               body: JSON.stringify({ otp, email }),
         method: "POST",
         headers: {
@@ -68,7 +68,7 @@ else{
       e.preventDefault();
       // Implement password reset logic here (server-side logic in a real app).
       // For this example, let's assume the password is successfully reset.
-      const response = await fetch("http://localhost:5500/changePwd", {
+      const response = await fetch(`${process.env.REACT_APP_LOCAL_URL}changePwd`, {
         body: JSON.stringify({ email, password }),
         method: "PUT",
         headers: {
