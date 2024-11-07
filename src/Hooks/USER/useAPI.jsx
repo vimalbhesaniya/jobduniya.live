@@ -10,13 +10,13 @@ const useAPI = () => {
 
     const postREQUEST = useCallback(async (PATH, BODY, HEADER) => {
             setSpinnerState(true);
-        try {
+        try { 
             const RESPONSE = await fetch(`${process.env.REACT_APP_LOCAL_URL}${PATH}`,
                 {
                     headers: {
                         "Content-Type": "application/json",
                         "authorization": Cookies.get("token"),
-                        'Authorization': `Bearer jobduniya`,
+                        'Authorization': `Bearer jobduniya`, 
                         ...HEADER
                     },
                     body: BODY,
