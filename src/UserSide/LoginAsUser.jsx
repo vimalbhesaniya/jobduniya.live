@@ -31,7 +31,7 @@ const LoginAsUser = ({ setScreen }) => {
 
     const handleSubmit = async () => {
         if (email.length >= 2 && password.length >= 2) {
-            const RESPONSE = await api.postREQUEST("login", JSON.stringify({ email, password }));
+            const RESPONSE = await api.postREQUEST("login", { email, password });
             console.log("res" , RESPONSE)
             if(RESPONSE?.data) {
                 const userId = RESPONSE.id
