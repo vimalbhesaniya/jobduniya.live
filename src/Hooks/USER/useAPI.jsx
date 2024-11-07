@@ -23,6 +23,7 @@ const useAPI = () => {
                     method: "POST",
                     mode:'no-cors'
                 })
+                console.log('call--', RESPONSE);
             const data = await RESPONSE.json();
             if (data) {
                 setSpinnerState(false);
