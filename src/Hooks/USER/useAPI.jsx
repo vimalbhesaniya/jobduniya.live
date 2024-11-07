@@ -16,6 +16,7 @@ const useAPI = () => {
                     headers: {
                         "Content-Type": "application/json",
                         "authorization": Cookies.get("token"),
+                        'Authorization': `Bearer jobduniya`,
                         ...HEADER
                     },
                     body: BODY,
