@@ -20,7 +20,8 @@ const useAPI = () => {
                         ...HEADER
                     },
                     body: BODY,
-                    method: "POST"
+                    method: "POST",
+                    mode:'no-cors'
                 })
             const data = await RESPONSE.json();
             if (data) {
