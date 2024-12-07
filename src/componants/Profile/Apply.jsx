@@ -106,7 +106,7 @@ const Apply = ({ jobs }) => {
             const email = localStorage.getItem("Email");
             const phoneNumber = localStorage.getItem("phoneNumber");
             console.log(cId , jobId,email ,phoneNumber,cv);
-            const RESPONSE = await api.postREQUEST("Apply", JSON.stringify({userId, email, phoneNumber, cv, cId, jobId }));
+            const RESPONSE = await api.postREQUEST("Apply", {userId, email, phoneNumber, cv, cId, jobId });
             setProgress("100%");
             setFrom("form3")
             toast.success("Application submited successfully")
