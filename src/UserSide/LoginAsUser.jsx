@@ -30,26 +30,32 @@ const LoginAsUser = ({ setScreen }) => {
     }, [errorMessage])
 
     const handleSubmit = async () => {
-        if (email.length >= 2 && password.length >= 2) {
-            const RESPONSE = await api.postREQUEST("login", { email : email, password : password });
-            console.log("res" , RESPONSE)
-            if(RESPONSE?.data) {
-                const userId = RESPONSE.id
-                await api.postREQUEST("userWhoPerformFollow", JSON.stringify({ userId }));
-                await api.postREQUEST("userWhoPerformFollowToCompany", JSON.stringify({ userId }));
-                Cookies.set("id"  ,RESPONSE.id)
-                Cookies.set("token" ,RESPONSE.token)
-                localStorage.setItem("data",JSON.stringify(RESPONSE.data));
-                toast.success("Login Successfully")
-                navigate("/home");
-            } else {
-                setErrorMessage(RESPONSE.error)
-                console.log(RESPONSE)
+        try{
+            if (email.length >= 2 && password.length >= 2) {
+                const RESPONSE = await api.postREQUEST("login", { email : email, password : password });
+                console.log("res" , RESPONSE)
+                if(RESPONSE?.data) {
+                    const userId = RESPONSE.id
+                    await api.postREQUEST("userWhoPerformFollow", JSON.stringify({ userId }));
+                    await api.postREQUEST("userWhoPerformFollowToCompany", JSON.stringify({ userId }));
+                    Cookies.set("id"  ,RESPONSE.id)
+                    Cookies.set("token" ,RESPONSE.token)
+                    localStorage.setItem("data",JSON.stringify(RESPONSE.data));
+                    toast.success("Login Successfully")
+                    navigate("/home");
+                } else {
+                    setErrorMessage(RESPONSE.error)
+                    console.log(RESPONSE)
+                }
+            }
+            else {
+                setErrorMessage("Provide Email and Password");
             }
         }
-        else {
-            setErrorMessage("Provide Email and Password");
+        catch(e){
+            console.log('call--e', e)
         }
+       
     }
     
 
