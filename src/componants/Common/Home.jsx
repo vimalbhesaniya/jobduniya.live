@@ -155,7 +155,7 @@ const Home = ({ setModell }) => {
                             </div>
                         </div>
                         <section className={home.jobS}>
-                            {jobs?.map((e) => {
+                            {Array.isArray(jobs) &&jobs?.map((e) => {
                                 return <>
                                     <div class="main-box">
                                         <div class="content-box">
