@@ -71,6 +71,7 @@
 .--btn {
     width: 100%;
     padding: 13px;
+    cursor: pointer;
     white-space: nowrap;
     border-radius: 10px;
     border: 1px solid rgb(90, 167, 255);

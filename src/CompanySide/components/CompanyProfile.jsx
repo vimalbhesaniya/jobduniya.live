@@ -27,46 +27,45 @@ const CompanyProfile = () => {
     // console.log(compnay);
     // console.log(company);
     const handleFollowButton = useCallback((targetId) => {
-        const UpdateFollow = async () => {
-            const company = await api.patchREQUEST(
-                `updateDetails`,
-                "companyConnections",
-                { userId: id },
-                {
-                    targetId: [targetId],
-                }
-            );
-            if (company) {
-                setConnectedCompany(company);
-            }
-            
-            setConnectingId((prev)=>{
-                if(prev?.includes(targetId))
-                {
-                    return prev.filter(id => id !== targetId);
-                }
-                else{
-                    return [...prev, targetId]
-                }
-            })
-        };
-        UpdateFollow();
+      const UpdateFollow = async () => {
+        const company = await api.usePatchREQUEST(
+          `updateDetails`,
+          "companyConnections",
+          { userId: id },
+          {
+            targetId: [targetId],
+          }
+        );
+        if (company) {
+          setConnectedCompany(company);
+        }
+
+        setConnectingId((prev) => {
+          if (prev?.includes(targetId)) {
+            return prev.filter((id) => id !== targetId);
+          } else {
+            return [...prev, targetId];
+          }
+        });
+      };
+      UpdateFollow();
     }, []);
-    
+
     const handleUnFollowButton = useCallback((targetId) => {
-        const UpdateFollow = async () => {
-            const users = await api.patchREQUEST(`api/companyfollow/${id}/remove/${targetId}`
-            );
-            setConnectedCompany(users);            
-            setConnectingId(prev => {
-                if (prev?.includes(targetId)) {
-                    return prev.filter(id => id !== targetId);
-                } else {
-                    return [...prev, targetId];
-                }
-            });
-        };
-        UpdateFollow();
+      const UpdateFollow = async () => {
+        const users = await api.usePatchREQUEST(
+          `api/companyfollow/${id}/remove/${targetId}`
+        );
+        setConnectedCompany(users);
+        setConnectingId((prev) => {
+          if (prev?.includes(targetId)) {
+            return prev.filter((id) => id !== targetId);
+          } else {
+            return [...prev, targetId];
+          }
+        });
+      };
+      UpdateFollow();
     }, []);
   return (
     <>

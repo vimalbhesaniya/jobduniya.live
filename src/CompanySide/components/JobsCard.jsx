@@ -32,7 +32,10 @@ const JobsCard = () => {
     const perFormSave = async (jobId) => {
         console.log(jobId);
         const userId= Cookies.get("id");
-        const response = await api.postREQUEST("savedJob" ,  JSON.stringify({userId , jobId}))
+        const response = await api.usePostREQUEST(
+          "savedJob",
+          JSON.stringify({ userId, jobId })
+        );
         
     }
     return (

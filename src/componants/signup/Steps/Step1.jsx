@@ -30,64 +30,68 @@ const Step1 = ({ setScreen }) => {
     const isValidateStep1 = useMemo(() =>
         isValidStep1(email, password, confirmPassword)
     );
+    const { mutate, isPending } = api.usePostREQUEST({
+      PATH: "addUser",
+      onSuccess: (data) => {
+        toast.success(data.message);
+        localStorage.setItem("upd_id", data._id);
+        setScreen("step2");
+      },
+      onError: (error) => {
+        toast.error(error.response.data.message);
+      },
+    });
 
     const handleSubmit = async () => {
-        const response = await api.postREQUEST("addUser", JSON.stringify({ email, password }));
-        localStorage.setItem("upd_id", response._id);
-        if (response.success == false) {
-            toast.error("A user with this email already exists. Please log in using your existing account credentials.");
-        }
-        else{
-            setScreen("step2");
-        }
-    }
+      mutate({ email, password });
+    };
     return (
-        <>
-            <FormContainer
-                heading={"Sign Up"}
-                leftSection={lottie}
-                title={
-                    "Just to be sure, enter your password again. Double-check for a seamless and secure login."
-                }
-                slogan={<Stepper steps={[{}, {}, {}, {}, {}, {}]} activeStep={0} />}
-                navigat={
-                    <p className="--navLink">
-                        Already have an account : <Link to={"/login"}>Login !</Link>
-                    </p>
-                }
-                textbox1={
-                    <InputText
-                        inputType={"email "}
-                        placeHolder={"Email*"}
-                        onChange={(e) => setEmail(e)}
-                    />
-                }
-                textbox2={
-                    <InputText
-                        inputType={"password"}
-                        password={true}
-                        placeHolder={"Password*"}
-                        onChange={(e) => setPassword(e)}
-                    />
-                }
-                textbox3={
-                    <InputText
-                        inputType={"password"}
-                        password={true}
-                        placeHolder={"Confirm Password*"}
-                        onChange={(e) => setConfirmPassword(e)}
-                    />
-                }
-                button2={
-                    <FormButton
-                        className={isValidateStep1 ? "--btnDisabled" : "--btn"}
-                        text={"next"}
-                        isDisabled={isValidateStep1}
-                        onClick={() => handleSubmit()}
-                    />
-                }
+      <>
+        <FormContainer
+          heading={"Sign Up"}
+          leftSection={lottie}
+          title={
+            "Just to be sure, enter your password again. Double-check for a seamless and secure login."
+          }
+          slogan={<Stepper steps={[{}, {}, {}, {}, {}, {}]} activeStep={0} />}
+          navigat={
+            <p className="--navLink">
+              Already have an account : <Link to={"/login"} style={{color:"blue"}}>Login !</Link>
+            </p>
+          }
+          textbox1={
+            <InputText
+              inputType={"email "}
+              placeHolder={"Email*"}
+              onChange={(e) => setEmail(e)}
             />
-        </>
+          }
+          textbox2={
+            <InputText
+              inputType={"password"}
+              password={true}
+              placeHolder={"Password*"}
+              onChange={(e) => setPassword(e)}
+            />
+          }
+          textbox3={
+            <InputText
+              inputType={"password"}
+              password={true}
+              placeHolder={"Confirm Password*"}
+              onChange={(e) => setConfirmPassword(e)}
+            />
+          }
+          button2={
+            <FormButton
+              text={"next"}
+              loading={isPending}
+              isDisabled={isValidateStep1 || isPending}
+              onClick={() => handleSubmit()}
+            />
+          }
+        />
+      </>
     );
 };
 

@@ -21,53 +21,50 @@ const AllUsersModel = () => {
     }, []);
 
     const handleFollowButton = useCallback((targetId) => {
-        const UpdateFollow = async () => {
-            const users = await api.patchREQUEST(
-                `updateDetails`,
-                "userFollow",
-                { userId: id },
-                {
-                    targetId: [targetId],
-                }
-            );
-            if (users) {
-                setFollowedUser(users);
-            }
-            
-            setFollowingId((prev)=>{
-                if(prev?.includes(targetId))
-                {
-                    return prev.filter(id => id !== targetId);
-                }
-                else{
-                    return [...prev, targetId]
-                }
-            })
-        };
-        UpdateFollow();
+      const UpdateFollow = async () => {
+        const users = await api.usePatchREQUEST(
+          `updateDetails`,
+          "userFollow",
+          { userId: id },
+          {
+            targetId: [targetId],
+          }
+        );
+        if (users) {
+          setFollowedUser(users);
+        }
+
+        setFollowingId((prev) => {
+          if (prev?.includes(targetId)) {
+            return prev.filter((id) => id !== targetId);
+          } else {
+            return [...prev, targetId];
+          }
+        });
+      };
+      UpdateFollow();
     }, []);
     const handleUnFollowButton = useCallback((targetId) => {
-        const UpdateFollow = async () => {
-            const users = await api.patchREQUEST(
-                `updateDetails`,
-                "userFollow",
-                { userId: id },
-                {
-                    targetId: [targetId],
-                }
+      const UpdateFollow = async () => {
+        const users = await api.usePatchREQUEST(
+          `updateDetails`,
+          "userFollow",
+          { userId: id },
+          {
+            targetId: [targetId],
+          }
+        );
+        setFollowedUser(users);
 
-            );
-            setFollowedUser(users);
-            
-            setFollowingId(prev => {
-                if (prev?.includes(targetId)) {
-                    return prev.filter(id => id !== targetId);
-                } else {
-                    return [...prev, targetId];
-                }
-            });
-        };
-        UpdateFollow();
+        setFollowingId((prev) => {
+          if (prev?.includes(targetId)) {
+            return prev.filter((id) => id !== targetId);
+          } else {
+            return [...prev, targetId];
+          }
+        });
+      };
+      UpdateFollow();
     }, []);
   return (
     <>

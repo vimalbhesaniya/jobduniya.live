@@ -8,31 +8,37 @@ import reportWebVitals from './reportWebVitals';
 import "./index.css"
 import RenderModal from "./render-model/RenderModal";
 import firebase from "firebase/compat/app"
+import  {QueryClientProvider , QueryClient } from "@tanstack/react-query";
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
 const firebaseConfig = {
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
 };
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
 const EnableSpinner = createContext();
 const ActiveModal = createContext();
 
 const Root = () => {
-    const [spinner, setSpinnerState] = useState(false);
-    const [activeModalState, setActiveModalState] = useState(false);
-    
+  const [spinner, setSpinnerState] = useState(false);
+  const [activeModalState, setActiveModalState] = useState(false);
+  const queryClient = new QueryClient();
 
-    return (
-        <React.StrictMode>
-            <ActiveModal.Provider value={[activeModalState,setActiveModalState]}>
-                <EnableSpinner.Provider value={[setSpinnerState, spinner]}>
-                <RenderModal />
-                    <div className='spinner'>
-                        {spinner && <Spinner />}
-                        <App />
-                    </div>
-                </EnableSpinner.Provider>
-            </ActiveModal.Provider>
-        </React.StrictMode>
-    );
+  return (
+    <React.StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <ActiveModal.Provider value={[activeModalState, setActiveModalState]}>
+          <EnableSpinner.Provider value={[setSpinnerState, spinner]}>
+            <RenderModal />
+            <div className="spinner">
+              {spinner && <Spinner />}
+              <App />
+            </div>
+          </EnableSpinner.Provider>
+        </ActiveModal.Provider>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </React.StrictMode>
+  );
 };
 
 const rootElement = document.getElementById('root');

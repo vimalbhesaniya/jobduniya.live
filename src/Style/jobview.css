@@ -456,6 +456,7 @@ transition: 1s all;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
     flex-direction: column;
     text-align: center;
 }
@@ -466,6 +467,7 @@ transition: 1s all;
     height: 300px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     justify-content: center;
     align-items: center;
 }

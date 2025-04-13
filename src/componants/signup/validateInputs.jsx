@@ -13,16 +13,14 @@ const InputText = ({
   minLength = 0,
   maxLength = 100,
   value,
-  onEnterHandler
+  onEnterHandler,
 }) => {
-  
   //Validating email if type is email
   const validateEmail = (email) => {
     return email.match(
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
   };
-
 
   const [type, setType] = useState(inputType);
   const [warningState, setWarningState] = useState("");
@@ -38,13 +36,13 @@ const InputText = ({
         if (type === "email") {
           if (validateEmail(e.target.value)) {
             setWarningState("");
-            onChange(e.target.value)
+            onChange(e.target.value);
           } else {
-            setWarningState("Invalid Email formate");
+            setWarningState("Please enter a valid email");
           }
         } else {
           setWarningState("");
-          onChange(e.target.value)
+          onChange(e.target.value);
         }
       }
     },
@@ -55,16 +53,18 @@ const InputText = ({
     if (type === "password") {
       return (
         <i
-          className={`${classes.eyediv} ${"ri-eye-off-line"}`}
+          class={`fa-solid fa-eye ${classes.eyediv}`}
           onClick={() => setType("text")}
-        />
+          style={{ cursor: "pointer" }}
+        ></i>
       );
     } else {
       return (
         <i
-          className={`${classes.eyediv} ${"ri-eye-line"}`}
+          className={`fa-solid fa-eye-slash ${classes.eyediv}`}
+          style={{ cursor: "pointer" }}
           onClick={() => setType("password")}
-        />
+        ></i>
       );
     }
   }, [type]);
@@ -83,7 +83,7 @@ const InputText = ({
           placeholder={placeHolder}
           id={id}
           required={require ?? true}
-          onChange={onInputChangeHandler}
+          onChange={onInputChangeHandler} 
           minLength={minLength}
           maxLength={maxLength}
           onKeyUp={onEnterHandler}

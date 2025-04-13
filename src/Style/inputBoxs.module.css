@@ -133,6 +133,7 @@
     top: 31%;
     margin: 0 auto;
     cursor: pointer;
+    z-index: 22;
 }
 
 .warning{

@@ -29,7 +29,10 @@ const api = useAPI()
 
   const handleSubmit = async () =>{
     if (email.length >= 2 && password.length >= 2) {
-        const RESPONSE = await api.postREQUEST("Clogin", JSON.stringify({ email, password }));
+        const RESPONSE = await api.usePostREQUEST(
+          "Clogin",
+          JSON.stringify({ email, password })
+        );
 
         if (RESPONSE.data) {
             toast.success("Login Successfully")
