@@ -19,7 +19,7 @@ import UploadPdf from "../../Hooks/OTHER/UploadPdf";
 import useUploadPdf from "../../Hooks/OTHER/UploadPdf";
 import { Avatar, Skeleton, Stack } from "@mui/material";
 
-const Apply = ({ jobs }) => {
+const Apply = () => {
   const upload = useUploadPdf();
   const [activeModalState, setActiveModalState] = useContext(ActiveModal);
   const [progress, setProgress] = useState("0%");
@@ -134,7 +134,7 @@ const Apply = ({ jobs }) => {
       "Are you sure you want to submit the application form?"
     );
     if (yes) {
-      const cId = data?.company?._id;
+      const cId = job?.[0]?.company?._id;
       const jobId = data._id;
       const email = localStorage.getItem("Email");
       const phoneNumber = localStorage.getItem("phoneNumber");
@@ -170,7 +170,7 @@ const Apply = ({ jobs }) => {
               <Skeleton height="30px" width="250px" animation="wave" />
             ) : (
               <span className="text-muted fontDefaultTitle">
-                Apply to {job?.company?.Name ?? ""}
+                Apply to {job?.[0]?.company?.Name ?? ""}
               </span>
             )}
           </div>
